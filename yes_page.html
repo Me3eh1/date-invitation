@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я знал, что ты согласишься!</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">Я знал, что ты согласишься!</h1>
+        <p id="chosen_option" class="chosen_option"></p>
+        <div class="gif_container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
+        </div>
+    </div>
+    <script>
+        const dateOptions = {
+            coffee: "☕ Кафе",
+            cinema: "🎬 Кино",
+            walk: "🌳 Прогулка в парке",
+            dinner: "🍝 Ужин в ресторане"
+        };
+        const chosen = new URLSearchParams(window.location.search).get("option");
+        if (chosen && dateOptions[chosen]) {
+            document.getElementById("chosen_option").textContent = "Мы идём: " + dateOptions[chosen] + "!";
+        }
+    </script>
+</body>
+</html>

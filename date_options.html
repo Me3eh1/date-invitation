@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Куда пойдём?</title>
+    <link rel="stylesheet" href="date_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">Ура! Куда пойдём?</h1>
+        <div class="options">
+            <a class="option" href="yes_page.html?option=coffee" onclick="handleOptionClick('Кафе', this.href, event)">
+                <span class="option_emoji">☕</span>
+                <span class="option_label">Кафе</span>
+            </a>
+            <a class="option" href="yes_page.html?option=cinema" onclick="handleOptionClick('Кино', this.href, event)">
+                <span class="option_emoji">🎬</span>
+                <span class="option_label">Кино</span>
+            </a>
+            <a class="option" href="yes_page.html?option=walk" onclick="handleOptionClick('Прогулка в парке', this.href, event)">
+                <span class="option_emoji">🌳</span>
+                <span class="option_label">Прогулка в парке</span>
+            </a>
+            <a class="option" href="yes_page.html?option=dinner" onclick="handleOptionClick('Ресторан', this.href, event)">
+                <span class="option_emoji">🍝</span>
+                <span class="option_label">Ужин в ресторане</span>
+            </a>
+        </div>
+    </div>
+    <script src="logger.js"></script>
+    <script>
+        function handleOptionClick(label, target, event) {
+            event.preventDefault();
+            logResponse({ option: label });
+            window.location.href = target;
+        }
+    </script>
+</body>
+</html>
