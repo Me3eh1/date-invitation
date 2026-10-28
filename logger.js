@@ -1,7 +1,7 @@
 // Сохранение выбранного варианта свидания в Google-форму (см. README.md, раздел «Сохранение ответов»).
 const RESPONSE_FORM = {
     actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSerF8_zhhiP6fNNZx1-clipawhG_MAaU2LdC1rA0HzNc5cPYQ/formResponse",
-    optionField: "entry.1659871712" // вопрос «Что выбрал человек» (варианты: Кафе / Кино / Прогулка в парке / Ресторан)
+    optionField: "entry.1659871712" // вопрос «Что выбрал человек» (варианты: Кафе / Кино / Прогулка в парке / Ресторан / Все и сразу)
 };
 
 // ВАЖНО: поле в форме — с вариантами ответа, поэтому value должен точно совпадать
